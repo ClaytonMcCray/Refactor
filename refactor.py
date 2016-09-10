@@ -2,9 +2,13 @@
 from re import sub
 import sys
 
-original_file_name = sys.argv[1] 
-regex_pattern = sys.argv[2]
-new_phrase = sys.argv[3]
+try:
+    original_file_name = sys.argv[1] 
+    regex_pattern = sys.argv[2]
+    new_phrase = sys.argv[3]
+except IndexError:
+    print('Error: must pass arguments \nfile_name old_phrase new_phrase')
+    sys.exit()
 with open('backup.txt', 'w') as backup:  # creates the backup file
     # below, we begin to write out the backup file
     with open(original_file_name, 'r') as original:
