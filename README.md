@@ -13,5 +13,6 @@ like this:
 
 The program will create a file called backup.txt in addition to making the
 refactor changes. backup.txt is an exact replica of the original file.
-The program is written for python 3.
+The program is written for python 3, and is (untested, but ought to be)
+cross platform (written on Debian Linux).
 
