@@ -18,7 +18,7 @@ with open(original_file_name + '.backup', 'w') as backup:  # creates the backup 
 # below rewrites the original file from backup.txt
 # but using the sub method to replace given word
 with open(original_file_name + '.backup', 'r') as backup:  # 'r' protects the file from being deleted
-    with open(original_file_name, 'w') as rewrite:  # 'w' ensures that the file will be overwritten
+    with open(original_file_name, 'w') as rewrite:  # 'w' ensures that the file is overwritten
         for line in backup:
             new_line = sub(regex_pattern, new_phrase, line)
             rewrite.write(new_line)
